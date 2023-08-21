@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-SteamActivityTracker-810f3c25-78cd-4b1b-9ed4-f091d389b395</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SteamActivityTracker.Abstractions\SteamActivityTracker.Abstractions.csproj" />
+    <ProjectReference Include="..\SteamActivityTracker.Core\SteamActivityTracker.Core.csproj" />
+    <ProjectReference Include="..\SteamActivityTracker.Infrastructure\SteamActivityTracker.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
