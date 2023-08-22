@@ -12,9 +12,5 @@ public sealed class SteamActivityTrackerContext : DbContext
     public DbSet<User> Users => Set<User>();
 
     public SteamActivityTrackerContext(DbContextOptions<SteamActivityTrackerContext> options)
-        : base(options)
-    {
-        //Database.EnsureDeleted();
-        Database.EnsureCreated();
-    }
+        : base(options) { }
 }
