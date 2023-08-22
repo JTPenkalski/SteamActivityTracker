@@ -7,6 +7,7 @@ using SteamActivityTracker.Core.Models;
 
 namespace SteamActivityTracker.Infrastructure.Services;
 
+/// <inheritdoc cref="ISteamActivityTrackingService"/>
 public class SteamActivityTrackingService : ISteamActivityTrackingService
 {
     protected readonly ILogger logger;
@@ -53,6 +54,10 @@ public class SteamActivityTrackingService : ISteamActivityTrackingService
             // User switched activities
             await StopActivityAsync(context, lastKnownActivity);
             await StartActivityAsync(context, currentUserStatus);
+        }
+        else
+        {
+            logger.LogInformation("No activity change detected.");
         }
 
         await context.SaveChangesAsync();

@@ -3,7 +3,6 @@ using SteamActivityTracker.Core.Models;
 
 namespace SteamActivityTracker.Core.Contexts;
 
-/// <inheritdoc cref="ISteamActivityTrackerContext"/>
 public sealed class SteamActivityTrackerContext : DbContext
 {
     public DbSet<Achievement> Achievements => Set<Achievement>();

@@ -80,7 +80,7 @@ public class SteamRequest
         {
             (nameof(Interface), Interface, string.IsNullOrWhiteSpace),
             (nameof(Endpoint), Endpoint, string.IsNullOrWhiteSpace),
-            (nameof(Version), Version, x => x == "v1" || x == "v2")
+            (nameof(Version), Version, x => !new HashSet<string> { VERSION_1, VERSION_2 }.Contains(x))
         };
 
         foreach (var (name, value, validation) in testProperties)

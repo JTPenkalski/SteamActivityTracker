@@ -6,6 +6,9 @@ using System.Net.Http.Json;
 
 namespace SteamActivityTracker.Infrastructure.Clients.Steam;
 
+/// <summary>
+/// Encapsulates common functionality for Steam Clients.
+/// </summary>
 public abstract class BaseSteamClient
 {
     protected readonly SteamClientOptions config;
